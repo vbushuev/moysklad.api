@@ -1,0 +1,35 @@
+{
+    "name": "vsb/moysklad",
+    "description": "The moysklad API Framework.",
+    "keywords": ["framework", "moysklad"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=7.1.0",
+        "guzzlehttp/guzzle": "~6.0",
+        "vlucas/phpdotenv": "^3.3"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+
+    },
+    "scripts": {
+
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    }
+}

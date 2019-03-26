@@ -1,0 +1,312 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Вход в МойСклад - Проверка логина и пароля</title>
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<META NAME="ROBOTS" CONTENT="NONE"/>
+<link rel="icon" href="/cdn/R598/89/online.moysklad.ru/favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="/cdn/R598/89/online.moysklad.ru/favicon.ico" type="image/x-icon"/>
+<link rel="apple-touch-icon" href="/cdn/R598/89/apple-touch-icon.png"/>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    
+        <link rel="stylesheet" href="/cdn/R598/89/css/style_moysklad.css" type="text/css"/>
+    
+    <script type="text/javascript">
+        function checks() {
+            if (window.window != window.top && window.name != "MOYSKLADFRAME") {
+                var wnd = window;
+                while (wnd.window != wnd.top) {
+                    if (wnd.name == "MOYSKLADFRAME") {
+                        break;
+                    }
+                    wnd = wnd.parent;
+                }
+                wnd.location.href = "/";
+            }
+            if (window.location.hash != '') {
+                document.cookie = "forwardtoken=" + escape(window.location.hash.replace("#", "")) + ";path=/;expires=01/01/2020 00:00:00;";
+            }
+        }
+
+        function trim(value) {
+            return value.replace(/^\s*/, "").replace(/\s*$/, "");
+        }
+
+        function correctHost() {
+            
+        }
+    </script>
+</head>
+<body onload="checks();correctHost();document.form.j_username.focus();">
+<div class="l-wrapper">
+
+    
+
+
+
+
+
+
+
+
+
+
+<script language="javascript" type="text/javascript" src="/cdn/R598/89/js/jquery.min.js"></script>
+<script language="javascript" type="text/javascript" src="/cdn/R598/89/js/util.js"></script>
+
+
+
+
+
+    
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function () {
+            try {
+                w.yaCounter5773414 = new Ya.Metrika({
+                    id: 5773414
+                });
+            } catch (e) {
+            }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () {
+                n.parentNode.insertBefore(s, n);
+            };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else {
+            f();
+        }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<!-- /Yandex.Metrika counter -->
+
+<!-- Google counter -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-1706628-7', 'moysklad.ru');
+    ga('send', 'pageview');
+
+</script>
+<!-- / Google counter -->
+
+
+    <div class="b-header">
+        <div class="l-header">
+
+            <div class="l-logo">
+                <a id="logolink" href="http://moysklad.ru/"><img src="/cdn/R598/89/images/white-logo.svg" alt="МойСклад"></a>
+                <div class="l-partner"></div>
+            </div>
+
+            <div class="l-support">
+                <div class="b-support">
+                    <h3 class="title" onclick="startSupportChat();">СЛУЖБА ПОДДЕРЖКИ</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Start of moyskladhelp Zendesk Widget script -->
+<script type="text/javascript">
+    window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+        d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+    _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+        $.src="https://v2.zopim.com/?29lVGtdl4DYKouKvmznPCVBKpHj5HTIC";z.t=+new Date;$.
+            type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+</script>
+<!-- End of moyskladhelp Zendesk Widget script -->
+
+    <div class="b-content">
+
+        <div class="left">
+            <div class="b-page-info">
+                <h1>Вход в МойСклад</h1>
+            </div>
+
+            <!-- Форма входа НАЧАЛО -->
+            <form id="logon" class="b-auth-form" name="form" action="doLogon" method="post" id="j_security_check"
+                  accept-charset="UTF-8">
+                <input type="hidden" name="returnPath" value="">
+                <input type="hidden" name="LognexShowCaptcha" value="false">
+                <div class="field">
+                    <div class="wrapper ">
+                        <input type="text" class="wrapped" name="j_username"
+                               value=""
+                               id="lable-login" tabindex=1 onChange="this.value = trim(this.value)"
+                               maxlength="255" />
+                        <span class="placeholder">Логин</span>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="wrapper ">
+                        <input type="password" class="wrapped" name="j_password"
+                               value=""
+                               id="lable-password" tabindex=2 onChange="this.value = trim(this.value)"/>
+                        <span class="placeholder">Пароль</span>
+                        <span class="eye"></span>
+                    </div>
+                </div>
+                
+                
+                <div class="field submit">
+                    <input name="submitButton" type="submit" id="submitButton" class="b-button"
+                           title="Войти" value="Войти" tabindex=3>
+                </div>
+                
+                <div class="field links">
+                    <div class="links-left">
+                        
+                        <a id="reglink" class="g-link" href="/registration">
+                            Регистрация
+                        </a>
+                        
+                    </div>
+                    <div class="links-right">
+                        
+                        <a id="restlink" class="g-link" href="/restorePassword">
+                            Забыли пароль?
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                <div class="field">
+                    <a class="login-via" href="https://login.1c.ru/oauth2.0/authorize?client_id=0594938d9092cc2&redirect_uri=https%3A%2F%2Fonline.moysklad.ru%2F1c%2Fsso%2Fredirect&response_type=code">
+                        <button class="b-button-login-via" type='button' title="Войти через 1С" tabindex="4">
+                            <div>Войти через</div>
+                            <img src="/cdn/R598/89/images/1-c-logo.png"/>
+                        </button>
+                    </a>
+                </div>
+                
+
+                
+
+
+
+
+
+                <div class="field oferta">
+                    
+
+
+
+
+
+
+Используя сервис, вы соглашаетесь с условиями 
+<a href="https://www.moysklad.ru/upload/files/oferta.pdf" target="_blank">
+    договора-оферты
+</a>
+
+                </div>
+            </form>
+        </div>
+
+        
+        
+
+        
+
+        
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="b-footer">
+    <div class="left">
+        
+            <p class="b-copyright">
+
+            
+                    &copy; 2007-2019 ООО «Логнекс»
+            
+
+            </p>
+        
+    </div>
+
+    
+        <div class="right">
+            <div class="locales">
+                <a class="g-Link" href="?lang=ru_RU">Русский</a>
+                <a class="g-Link" href="?lang=en_US">English</a>
+                <a class="g-Link" href="?lang=pl_PL">Polski</a>
+            </div>
+        </div>
+    
+</div>
+
+<script type="text/javascript">
+    if ("retail.kkm.app" == window.name) {
+        document.querySelector("a#logolink").href = "#";
+        document.getElementById("emaillink").style.visibility = "hidden"
+        document.getElementById("reglink").style.visibility = "hidden";
+        document.getElementById("restlink").style.visibility = "hidden";
+        document.querySelector("a#copylink").href = "#";
+    }
+</script>
+</body>
+</html>
